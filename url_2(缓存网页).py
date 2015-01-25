@@ -4,4 +4,6 @@ url = sys.argv[1]
 #若不指定filename则生成临时文件
 filename = urllib.urlretrieveu(url,"get.html")
 #若指定filename则生成本地文件
+#urllib.cleanup()
+#清除缓存
 

@@ -1,3 +1,7 @@
+import urllib
+from PIL import Image
+
+
 for i in range(100):
     
     c=urllib.urlopen('http://211.70.49.127/CheckCode.aspx')
@@ -8,3 +12,6 @@ for i in range(100):
     o.flush()
     o.close
     print "第%d个线程已成功抓取验证码..."%cs
+    
+im = Image.open('cheak1.png')
+im.show()

@@ -2,7 +2,7 @@ import urllib
 for i in range(98):
     t = i+1
     o = file('url.txt','w+')
-    url = "http://211.242.152.%d"%t
+    url = "http://210.242.125.%d"%t
     try:
         google = urllib.urlopen(url)
         cheak = int(google.getcode())

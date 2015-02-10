@@ -7,6 +7,24 @@ sock.bind((host,port))
 print 'waiting for connection...'
 sock.listen(3)
 while True:
-    clientsock,clientaddr = sock.accept()
-    print clientsock.getpeername()
-    clientsock.close()
+    try:
+        clientsock,clientaddr = sock.accept()
+    except KeyboardInterrupt:
+        raise
+    except:
+        traceback.print_exc()
+        continue
+    try:
+        print clientsock.getpeername()
+    except KeyboardInterrupt:
+        raise
+    except:
+        traceback.print_exc()
+        continue
+    try:
+        clientsock.close()
+    except KeyboardInterrupt:
+        raise
+    except:
+        traceback.print_exc()
+        continue

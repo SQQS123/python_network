@@ -41,8 +41,18 @@ class get_link():
                     link = 'magnet:?xt=urn:btih:%s'%str4.decode('ascii')
                     print link
             else:
-                print '无资源'
-                pass
+                list4 = re.findall(u"都说了本站真的不提供下载 \w+",str1.decode('utf8'))
+                if list4:
+                    for i in list4:
+                        final = re.findall(r'\w+',i)
+                        str4 = ''.join(final)
+                        link = 'magnet:?xt=urn:btih:%s'%str4.decode('ascii')
+                        print link
+                else:
+                    print '无资源'
+                    pass
+        print'--------------------------------------------------------------------------------'
+                        
                 
 
 

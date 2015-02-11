@@ -1,11 +1,11 @@
 #-*-coding:utf-8-*-
 import urllib,urllib2,re
-url = 'http://www.hacg.in/wordpress/54502'
+url = 'http://www.hacg.in/wordpress/54502'
 req = urllib2.Request(url)
 web = urllib2.urlopen(req)
 str1 = web.read()
 #print str1
-print url
+print url
 str2 = re.findall(r'<title>.*?</title>',str1)
 for i in str2:
     print "\t",i

@@ -22,7 +22,7 @@ class get_link():
         return list2
     def link(self,url):
         str1 = load(url)
-        list1 = re.findall(r'<title>.*?e',str1)
+        list1 = re.findall(r'<title>.*?</title>',str1)
         str2 = ''.join(list1)
         print str2
         list2 = re.findall(u"本站不提供下载\w+",str1.decode('utf8'))
@@ -51,7 +51,7 @@ class get_link():
                 else:
                     print '无资源'
                     pass
-        print'--------------------------------------------------------------------------------'
+        print'-------------------------------------------------------------------------------------------------'
                         
                 
 

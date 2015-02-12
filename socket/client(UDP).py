@@ -1,7 +1,8 @@
-import socket
+import pysock
 ip = '192.168.1.103'
 port = 51423
-client = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+ser = pysock.new_server()
+client = ser.open_UDP()
 client.connect((ip,port))
 client.sendall('hello')
 try:

@@ -4,7 +4,8 @@ port = 51423
 ser = pysock.new_server()
 client = ser.open_UDP()
 client.connect((ip,port))
-client.sendall('hello')
+code = raw_input('code')
+client.sendall(code)
 try:
     print client.recv(1024)
 except(IOError):

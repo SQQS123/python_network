@@ -20,7 +20,7 @@ while True:
         if STDOUT:
             s.sendto(STDOUT,address)
         else:
-            print '0'
+            s.sendto('ok',address)
         
     except(IOError):
         pass

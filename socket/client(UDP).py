@@ -5,7 +5,7 @@ ser = pysock.new_server()
 client = ser.open_UDP()
 client.connect((ip,port))
 while True:
-    code = raw_input('code')
+    code = raw_input('>:')
     client.sendall(code)
     try:
         print client.recv(1024)

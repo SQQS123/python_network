@@ -1,6 +1,6 @@
 #-*-coding:utf-8-*-
 import urllib,urllib2,re
-url = 'http://www.hacg.in/wordpress/54407'
+url = 'http://www.hacg.in/wordpress/54810'
 req = urllib2.Request(url)
 web = urllib2.urlopen(req)
 str1 = web.read()

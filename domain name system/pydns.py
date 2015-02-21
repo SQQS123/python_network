@@ -22,10 +22,10 @@ def ana_fin(c,x):
     for i in range(times):
         print '*******************************************************'
         print u'指针：%x%x'%(ord(c[g+1]),ord(c[g+2]))
-        print u'第一个资源的响应类型：%x%x'%(ord(c[g+3]),ord(c[g+4]))
-        print u'第一个资源的响应类：%x%x'%(ord(c[g+5]),ord(c[g+6]))
-        print u'第一个资源的生存时间：%x%x%x%x'%(ord(c[g+7]),ord(c[g+8]),ord(c[g+9]),ord(c[g+10]))
-        print u'第一个资源的数据长度：%x%x'%(ord(c[g+11]),ord(c[g+12]))
+        print u'第%d个资源的响应类型：%x%x'%(i+1,ord(c[g+3]),ord(c[g+4]))
+        print u'第%d个资源的响应类：%x%x'%(i+1,ord(c[g+5]),ord(c[g+6]))
+        print u'第%d个资源的生存时间：%x%x%x%x'%(i+1,ord(c[g+7]),ord(c[g+8]),ord(c[g+9]),ord(c[g+10]))
+        print u'第%d个资源的数据长度：%x%x'%(i+1,ord(c[g+11]),ord(c[g+12]))
         print u'返回的IP地址：%d.%d.%d.%d'%(ord(c[g+13]),ord(c[g+14]),ord(c[g+15]),ord(c[g+16]))
         g+=16
     print '-----------------------------------------------------'

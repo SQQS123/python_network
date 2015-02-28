@@ -2,7 +2,7 @@ import urllib
 from PIL import Image
 
 
-for i in range(100):
+for i in range(1):
     
     c=urllib.urlopen('http://211.70.49.127/CheckCode.aspx')
     d=c.read()
@@ -11,7 +11,7 @@ for i in range(100):
     o.write(d)
     o.flush()
     o.close
-    print "ç¬¬%dä¸ªçº¿ç¨‹å·²æˆåŠŸæŠ“å–éªŒè¯ç ..."%cs
+    print "µÚ%d¸öÏß³ÌÒÑ³É¹¦×¥È¡ÑéÖ¤Âë..."%cs
     
 im = Image.open('cheak1.png')
 im.show()
